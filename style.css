@@ -1,14 +1,36 @@
+:root {
+    /*color palette*/
+    --primary-bg: #0a0d19;
+    --btn-bg: #197D36;
+    --secondary-bg: #a49cd66c;
+    --third-bg: #0D1117;
+    --fourth-bg: #070942;
+    /*Secondary colors*/
+    --blue-bg:blue;
+    --blue-two-bg: #00b7ff;
+    --grey-primary-bg: grey;
+    --black-bg: black;
+    --white-bg: white;
+    --grey-two-bg: #9e9e9e;
+    --dark-green-bg: #00d0ff41;
+    --white-opacity-low: #ffffff6e;
+    --black-opacity-low: #0000004d;
+    /*others*/
+    --paddings: 20px;
+}
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 body {
     color: white;
     padding-top: 70px;
-    background-color: #070942;
+    
+    background-color: var(--fourth-bg);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -20,13 +42,6 @@ main section {
     padding: var(--paddings);
 }
 
-:root {
-    --primary-bg: #0a0d19;
-    --btn-bg: #197D36;
-    --secondary-bg: #a49cd66c;
-    --third-bg: #0D1117;
-    --paddings: 20px;
-}
 
 .nav {
     width: 100%;
@@ -39,7 +54,7 @@ main section {
     transform: translateZ(0);
     display: flex;
     transition: background-color 0.4s ease-in-out;
-    background-color: #070942;
+    background-color: var(--fourth-bg);
     align-items: center;
     padding: var(--paddings);
     justify-content: space-between;
@@ -51,20 +66,20 @@ main section {
 }
 
 .nav a {
-    color: white;
+    color: var(--white-bg);
     font-size: 14px;
-    border: 1px solid white;
+    border: 1px solid var(--white-bg);
     padding: 5px 10px;
     border-radius: 4px;
     transition: 0.3s ease-in-out;
 }
 #nickname {
-    color: white;
+    color: var(--white-bg);
     font-size: 14px;
 }
 .nav a:active {
     filter: invert(1);
-    background-color: black;
+    background-color: var(--black-bg);
 }
 .primary-section {
     text-align: center;
@@ -86,7 +101,7 @@ main section {
 }
 
 .primary-section form {
-    background-color: white;
+    background-color: var(--white-bg);
     max-width: 600px;
     gap: 10px;
     margin: 0 auto;
@@ -101,13 +116,13 @@ main section {
 
 .email-main {
     border: 0;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--grey-primary-bg);
     transition: 0.5s ease-in-out;
     padding: 10px;
 }
 
 .email-main:focus {
-    outline: 1px solid blue;
+    outline: 1px solid var(--blue-bg);
     border-radius: 10px;
 }
 
@@ -125,7 +140,7 @@ main section {
     padding: 10px;
     width: 100%;
     font-size: 15px;
-    color: white;
+    color: var(--white-bg);
     border: none;
     transition: 0.5s ease-in-out;
     cursor: pointer;
@@ -133,9 +148,9 @@ main section {
 }
 
 .primary-section a {
-    color: white;
+    color: var(--white-bg);
     font-size: 14px;
-    border: 1.5px solid white;
+    border: 1.5px solid var(--white-bg);
     padding: 10px 15px;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
@@ -143,13 +158,13 @@ main section {
 
 .primary-section a:active {
     filter: invert(1);
-    background-color: black;
+    background-color: var(--black-bg);
 }
 
 .secondary-section {
     text-align: center;
     gap: 25px;
-    background-color: #0D1117;
+    background-color: var(--third-bg);
 }
 
 .video-primary {
@@ -160,7 +175,7 @@ main section {
 .photo-plan,
 .video-secondary {
     width: 100%;
-    border: 1px solid rgba(0, 208, 255, 0.256);
+    border: 1px solid var(--dark-green-bg);
     background-color: var(--secondary-bg);
     border-radius: 30px;
     animation: video-block 0.5s ease-in-out forwards;
@@ -176,13 +191,13 @@ main section {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    color: rgb(191, 191, 191);
+    color: var(--grey-two-bg);
 }
 
 .secondary-section div {
     display: flex;
     align-items: center;
-    border: 1px solid #ffffff6e;
+    border: 1px solid var(--white-opacity-low);
     padding: 5px 20px;
     border-radius: 30px;
     transition: 0.4s ease-in-out;
@@ -196,8 +211,8 @@ main section {
 }
 
 .text-primary {
-    background-color: #ffffff1d;
-    border: 1px solid white;
+    background-color: var(--white-opacity-low);
+    border: 1px solid var(--white-bg);
     padding: 10px 40px;
     border-radius: 30px;
 }
@@ -246,7 +261,7 @@ main section {
 .third-section video {
     width: 95%;
     cursor: pointer;
-    box-shadow: 2px 2px 5px #0000004d;
+    box-shadow: 2px 2px 5px var(--black-opacity-low);
     transition: transform 0.6s ease-in-out;
     border-radius: 10px;
 }
@@ -262,7 +277,7 @@ main section {
 .card-text-div,
 .gartnet-card {
     display: flex;
-    color: #c6c6c6;
+    color: var(--white-opacity-low);
     align-items: self-start;
     justify-content: center;
     padding: 30px;
@@ -271,12 +286,12 @@ main section {
 }
 
 .cards-section a {
-    color: #00b7ff;
+    color: var(--blue-two-bg);
     font-size: 17px;
 }
 
 .cards-section span {
-    color: white;
+    color: var(--white-bg);
 }
 
 .card-text-div h1 {
@@ -289,12 +304,12 @@ main section {
 
 .duolingo-card,
 .gartnet-card {
-    border: 1px solid #8080808e;
+    border: 1px solid var(--white-opacity-low);
     border-radius: 5px;
 }
 
 .fifth-section {
-    border: 1px solid #ffffff5e;
+    border: 1px solid var(--white-opacity-low);
     border-radius: 10px;
     background: linear-gradient(to bottom, #10151d, #041b28, #040628);
     text-align: left;
@@ -304,7 +319,7 @@ main section {
 }
 
 .fifth-section span {
-    color: white;
+    color:var(--white-bg);
 }
 
 .fifth-section div {
@@ -323,7 +338,7 @@ main section {
 }
 
 .fifth-section a {
-    color: #00b7ff;
+    color: var(--blue-two-bg);
     font-size: 15px;
 }
 
@@ -345,7 +360,7 @@ footer section {
     min-height: 15vh;
     text-align: center;
     background-color: var(--primary-bg);
-    color: white;
+    color: var(--white-bg);
 }
 
 @media (min-width:1024px) {
@@ -364,11 +379,11 @@ footer section {
         text-align: left;
         flex-direction: row;
         gap: 30px;
-        color: #cbcbcb;
+        color: var(--white-opacity-low);
     }
 
     .fifth-section span {
-        color: white;
+        color: var(--white-bg);
     }
 
     .fifth-section div {
@@ -455,11 +470,11 @@ footer section {
         text-align: left;
         flex-direction: row;
         gap: 30px;
-        color: #cbcbcb;
+        color: var(--white-opacity-low);
     }
 
     .fifth-section span {
-        color: white;
+        color: var(--white-bg)  ;
     }
 
     .fifth-section div {
