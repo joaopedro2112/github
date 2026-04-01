@@ -1,3 +1,9 @@
+:root {
+    --primary-bg: #010103;
+    --secondary-bg:#43434373;
+    --white-bg: white;
+    --blue-bg: blue;
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +11,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary-bg: #010103;
-}
 
 main section {
     display: flex;
@@ -20,7 +23,7 @@ main section {
 .primary-section {
     background: linear-gradient(to bottom, #010103, #3f0c53);
     flex-direction: column;
-    color: white;
+    color: var(--white-bg);
     gap: 10px;
 }
 
@@ -50,7 +53,7 @@ main section {
 .email,
 .password,
 .submit {
-    border: 1px solid #43434373;
+    border: 1px solid var(--secondary-bg);
     padding: 10px 70px;
     border-radius: 5px;
 }
@@ -58,13 +61,13 @@ main section {
 .nickname:focus,
 .email:focus,
 .password:focus {
-    outline: 1px solid #0040ff;
+    outline: 1px solid var(--blue-bg);
 }
 
 .submit {
     background-color: var(--primary-bg);
-    color: white;
-    border: 1px solid #ffffff6b;
+    color: var(--white-bg);
+    border: 1px solid var(--secondary-bg);
     transition: 0.3s ease-in-out;
 }
 
@@ -103,6 +106,7 @@ main section {
     }
     .secondary-section form {
         gap: 15px;
+        align-items: center;
     }
     .nickname,
     .email,
