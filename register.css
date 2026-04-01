@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg: #010103;
+}
+
+main section {
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+}
+
+.primary-section {
+    background: linear-gradient(to bottom, #010103, #3f0c53);
+    flex-direction: column;
+    color: white;
+    gap: 10px;
+}
+
+.primary-section img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.secondary-section {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.secondary-section form {
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.nickname,
+.email,
+.password,
+.submit {
+    border: 1px solid #43434373;
+    padding: 10px 70px;
+    border-radius: 5px;
+}
+
+.nickname:focus,
+.email:focus,
+.password:focus {
+    outline: 1px solid #0040ff;
+}
+
+.submit {
+    background-color: var(--primary-bg);
+    color: white;
+    border: 1px solid #ffffff6b;
+    transition: 0.3s ease-in-out;
+}
+
+.nickname::placeholder,
+.email::placeholder,
+.password::placeholder {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+.submit:active {
+    filter: invert(1);
+    transform: scale(0.9);
+}
+
+.secondary-section p {
+    width: 100%;
+    max-width: 600px;
+}
+
+@media (min-width:768px) {
+    .primary-section {
+        align-items: center;
+    }
+
+    .primary-section img {
+        width: 25%;
+    }
+
+    .primary-section h1 {
+        font-size: 40px;
+    }
+
+    .primary-section p {
+        font-size: 16px;
+    }
+    .secondary-section form {
+        gap: 15px;
+    }
+    .nickname,
+    .email,
+    .password,
+    .submit {
+        padding: 10px 100px;
+    }
+    .secondary-section {
+        align-items: center;
+    }
+}
